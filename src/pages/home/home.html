@@ -1,7 +1,10 @@
 <ion-header>
   <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon> 
+    </button>
     <ion-title>
-      Heloo
+      	Heloo
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -29,7 +32,7 @@
 	  <ion-row>
 	    <ion-col>
 	      <button ion-button icon-left clear small (click)="viewLikes()">
-	        <ion-icon name="thumbs-up"></ion-icon>
+	        <ion-icon name="heart"></ion-icon>
 	        <div>12 Likes</div>
 	      </button>
 	    </ion-col>
@@ -69,7 +72,7 @@
 	  <ion-row>
 	    <ion-col>
 	      <button ion-button icon-left clear small>
-	        <ion-icon name="thumbs-up"></ion-icon>
+	        <ion-icon name="heart"></ion-icon>
 	        <div>12 Likes</div>
 	      </button>
 	    </ion-col>
@@ -109,7 +112,7 @@
 	  <ion-row>
 	    <ion-col>
 	      <button ion-button icon-left clear small>
-	        <ion-icon name="thumbs-up"></ion-icon>
+	        <ion-icon name="heart"></ion-icon>
 	        <div>12 Likes</div>
 	      </button>
 	    </ion-col>
@@ -127,6 +130,12 @@
 	  </ion-row>
 </ion-card>
 
+
+
+<ion-fab right bottom>
+    <button ion-fab color="light" (click)="newPost()"><ion-icon name="add"></ion-icon></button>
+   
+  </ion-fab>
 
 </ion-content>
 

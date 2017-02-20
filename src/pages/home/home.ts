@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController} from 'ionic-angular';
 import { ReplyPage } from '../reply/reply';
 import { LikesPage } from '../likes/likes';
+import { NewPostPage } from '../new-post/new-post';
 
 @Component({
   selector: 'page-home',
@@ -18,5 +19,8 @@ export class HomePage {
     	this.navCtrl.push(LikesPage, {"Sdsd":"Sdsd"});
 	}
 
+	newPost() {
+		this.navCtrl.push(NewPostPage, {"Sdsd":"Sdsd"});
+	}
 
 }
