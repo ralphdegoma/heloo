@@ -1,127 +1,118 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button icon-only menuToggle>
-      <ion-icon name="menu"></ion-icon> 
-    </button>
+  <ion-navbar primary>
+
+
     <ion-title>
-      	Heloo
+      Heloo
     </ion-title>
+
+    <ion-buttons end style="margin-right:90px">
+      	<ion-item style="background-color:#f8f8f8 ;border-bottom: 1px solid #f8f8f8;">
+		  <ion-label>Autoplay</ion-label>
+		  <ion-toggle  checked="true"></ion-toggle>
+		</ion-item>
+    </ion-buttons>
+
+    <ion-buttons end style="margin-right:20px">
+      <button (click)="myFunction()" ion-button icon-only>
+        <ion-icon ios="ios-people" md="md-people"></ion-icon>
+      </button>
+    </ion-buttons>
+
+
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
-  <div class="message-body" >
-		<div class="message-text">
+	<ion-list>
 
-			<div class="c100 p15 loader" style="font-size: 25px">
+
+		<ion-item>
+		    <ion-avatar item-left>
+		      <img src="assets/images/bridgett.jpg">
+		    </ion-avatar>
+		    <h2>Bridgett</h2>
+		    <p>3 hrs ago</p>
+		    <div item-right class="c100 p25" style="font-size:35px;">
 			  <span>25%</span>
 			  <div class="slice">
 			    <div class="bar"></div>
 			    <div class="fill"></div>
 			  </div>
 			</div>
+	  	</ion-item>
 
-			<div class="profile inline">
-				<img src="img/profile.jpg" class="thumb" >
-			</div>
-			<div class="profile-info inline">
-				<label>Bridgett  Lloren</label>
-			</div>
-			<div class="other-info">
-				<label>3s ago</label>
-			</div>
-			<div class="message-progress">
-			</div>
-		</div>
-
-		<div class="message-text">
-			<div class="c100 p15 loader" style="font-size: 25px">
+	  	<ion-item>
+		    <ion-avatar item-left>
+		      <img src="assets/images/ralph.jpg">
+		    </ion-avatar>
+		    <h2>Ralph</h2>
+		    <p>just now</p>
+		    <div item-right class="c100 p25" style="font-size:35px;">
 			  <span>25%</span>
 			  <div class="slice">
 			    <div class="bar"></div>
 			    <div class="fill"></div>
 			  </div>
 			</div>
-			<div class="profile inline">
-				<img src="img/profile.jpg" class="thumb" >
-			</div>
-			<div class="profile-info inline">
-				<label>Bridgett s</label>
-			</div>
-			<div class="other-info">
-				<label>3s ago</label>
-			</div>
-			<div class="message-progress">
-			</div>
-		</div>
+	  	</ion-item>
 
-		<div class="message-text-self">
-			<div class="c100 p15 loader-self" style="font-size: 25px">
+	  	<ion-item>
+		    <ion-avatar item-left>
+		      <img src="assets/images/bridgett.jpg">
+		    </ion-avatar>
+		    <h2>Bridgett</h2>
+		    <p>3 hrs ago</p>
+		    <div item-right class="c100 p100" style="font-size:35px;">
 			  <span>25%</span>
 			  <div class="slice">
 			    <div class="bar"></div>
 			    <div class="fill"></div>
 			  </div>
 			</div>
-			<div class="profile-self inline">
-				<img src="img/profile.jpg" class="thumb" >
-			</div>
-			<div class="other-info-self">
-				<label>3s ago</label>
-			</div>
-			<div class="message-progress-self">
-			</div>
-		</div>
+	  	</ion-item>
 
-		<div class="message-text">
-			<div class="c100 p15 loader" style="font-size: 25px">
+	  	<ion-item>
+		    <ion-avatar item-left>
+		      <img src="assets/images/bridgett.jpg">
+		    </ion-avatar>
+		    <h2>Bridgett</h2>
+		    <p>3 hrs ago</p>
+		    <div item-right class="c100 p85" style="font-size:35px;">
 			  <span>25%</span>
 			  <div class="slice">
 			    <div class="bar"></div>
 			    <div class="fill"></div>
 			  </div>
 			</div>
-			<div class="profile inline">
-				<img src="img/profile.jpg" class="thumb" >
-			</div>
-			<div class="profile-info inline">
-				<label>Bridgett  Lloren</label>
-			</div>
-			<div class="other-info">
-				<label>3s ago</label>
-			</div>
-			<div class="message-progress">
-			</div>
-		</div>
+	  	</ion-item>
 
-		<div class="message-text-self">
+	</ion-list>
 
-			<div class="c100 p15 loader-self" style="font-size: 25px">
-			  <span>25%</span>
-			  <div class="slice">
-			    <div class="bar"></div>
-			    <div class="fill"></div>
-			  </div>
-			</div>
 
-			<div class="profile-self inline">
-				<img src="img/profile.jpg" class="thumb" >
-			</div>
-			<div class="other-info-self">
-				<label>3s ago</label>
-			</div>
-			<div class="message-progress-self">
-			</div>
-		</div>
+	
 
-		<div class="record-body">
-			<div class="record">
-			</div>
-		</div>
 
-	</div>
 
 </ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>
+
+    	<ion-grid padding>
+	  <ion-row>
+	    <ion-col width-100 >
+			<button ion-button color="danger" style="height:40px" outline block><ion-icon ios="ios-recording" md="md-recording" style="font-size:30px;"></ion-icon></button>
+
+	    </ion-col>
+	  </ion-row>
+	</ion-grid>
+
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
 
 
