@@ -1,0 +1,122 @@
+.message-body{
+	position: relative;
+	width: 340px;
+	height: 500px;
+	border:1px solid green;
+}
+.message-text{
+	position: relative;
+	width: 80%;
+	height: 70px;
+	border:1px solid #99cc99;
+	border-radius: 45px;
+	margin:8px;
+	overflow:hidden;
+}
+.thumb{
+	margin:10px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+.profile{
+	position: relative;
+	margin-top: 10px;
+}
+
+.profile-info{
+	top:-25px; 
+	left: -10px;
+	position: relative;
+	font-size: 13px;
+	color: #616161;
+}
+.other-info{
+	top:-25px; 
+	left: 45px;
+	position: relative;
+	font-size: 11px;
+	color: #616161;
+}
+.inline{
+	display: inline-block;
+}
+.message-progress{
+	position: absolute;
+	background-color: green;
+	width: 70%;
+	height: 30px;
+	top:68px;
+	opacity: 0.4;
+	z-index: -999;
+}
+
+
+
+.message-text-self{
+	position: relative;
+	width: 80%;
+	height: 70px;
+	border:2px solid #e7e7e7;
+	border-radius: 45px;
+	margin:8px;
+	float: right;
+	overflow:hidden;
+}
+.profile-self{
+	position: relative;
+	margin-top: 10px;
+	float: right;
+}
+
+.profile-info-self{
+	top:25px; 
+	left: -10px;
+	position: relative;
+	font-size: 13px;
+	float: right;
+	color: #616161;
+
+}
+.other-info-self{
+	top:30px; 
+	left: 0px;
+	float: right;
+	position: relative;
+	font-size: 11px;
+	color: #616161;
+}
+
+.message-progress-self{
+	position: absolute;
+	background-color: #4298b0;
+	width: 70%;
+	height: 30px;
+	top:68px;
+	opacity: 0.4;
+	z-index: -999;
+}
+
+
+
+.record-body{
+	width: 90%;
+	height: 70px;
+	border:1px solid #ccc;
+	border-radius: 45px;
+	margin:10px;
+	position: absolute;
+    bottom: 0;
+    left:5px;
+}
+
+.record{
+	position: relative;
+	margin: 0px;
+	border: 1px solid #fcb6b6;
+	height: 30px;
+	width: 30px;
+	left:140px;
+	top:20px;
+	border-radius: 20px;
+}
