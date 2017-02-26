@@ -1,26 +1,21 @@
 import { Component } from '@angular/core';
-import { NavController} from 'ionic-angular';
-import { ReplyPage } from '../reply/reply';
-import { LikesPage } from '../likes/likes';
-import { NewPostPage } from '../new-post/new-post';
+import { NavController,AlertController} from 'ionic-angular';
+import { MediaCapture,MediaPlugin, MediaFile, CaptureError, File } from 'ionic-native';
+import { RecordPage } from '../record/record';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
+ 
+
+
+
 export class HomePage {
-  	constructor(public navCtrl: NavController) {}
 
-  	viewReplies() {
-    	this.navCtrl.push(ReplyPage, {"Sdsd":"Sdsd"});
+  	constructor(public navCtrl: NavController) {
+  	}
+  	recorderView() {
+    	this.navCtrl.push(RecordPage, {"Sdsd":"Sdsd"});
 	}
-
-	viewLikes() {
-    	this.navCtrl.push(LikesPage, {"Sdsd":"Sdsd"});
-	}
-
-	newPost() {
-		this.navCtrl.push(NewPostPage, {"Sdsd":"Sdsd"});
-	}
-
 }

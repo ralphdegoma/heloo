@@ -1,0 +1,67 @@
+<!--
+  Generated template for the Record page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Heloo - Say it</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-grid>
+		<ion-row>
+		    <ion-col width-100  text-center class="recorder-body">
+		    	<ion-col width-100 text-center>
+					<h4>{{limit_sec}} second/s</h4>
+					{{audioDuration}}
+				</ion-col>
+	    		<div center class="c100 p{{percentage}} recorder" (click)="processRecording()">
+				  <span  >
+				  		<img [hidden]="image_record" src="assets/images/record.svg">	
+				  		<img [hidden]="image_play" src="assets/images/play.svg">
+				  		<img [hidden]="image_stop" src="assets/images/stop.svg">
+				  	</span >
+				  <div center class="slice">
+				    <div class="bar"></div>
+				    <div class="fill"></div>
+				  </div>
+				</div>
+		    </ion-col>
+		</ion-row>
+	</ion-grid>
+
+</ion-content>
+
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>
+
+    	<ion-grid padding>
+		  <ion-row>
+		    <ion-col width-50 >
+				<button ion-button color="default" round (click)="sendRecordedMessage()" style="height:40px"  block>
+					  <ion-icon ios="ios-send" md="md-send"> Send</ion-icon> 
+				</button>
+		    </ion-col>
+
+		     <ion-col width-50 >
+				<button ion-button color="danger" round (click)="resetRecording()" style="height:40px"  block>
+					 <ion-icon ios="ios-refresh" md="md-refresh"> Reset</ion-icon>
+				</button>
+		    </ion-col>
+		  </ion-row>
+	</ion-grid>
+
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
+
+

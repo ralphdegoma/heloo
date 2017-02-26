@@ -105,8 +105,9 @@
     	<ion-grid padding>
 	  <ion-row>
 	    <ion-col width-100 >
-			<button ion-button color="danger" style="height:40px" outline block><ion-icon ios="ios-recording" md="md-recording" style="font-size:30px;"></ion-icon></button>
-
+			<button ion-button color="light" (click)="recorderView()" style="height:40px"  block>
+				<img src="assets/images/record.png">
+			</button>
 	    </ion-col>
 	  </ion-row>
 	</ion-grid>
