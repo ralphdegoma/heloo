@@ -4,8 +4,17 @@ import { MediaCapture,MediaPlugin,HTTP, MediaFile, CaptureError, File } from 'io
 import {OnInit, OnDestroy} from '@angular/core';
 import {Observable} from 'rxjs/Rx';
 import { Transfer } from 'ionic-native';
+import { Progressbar } from 'progressbar.js';
+
+
+
+
+declare var require: any;
 declare var recorder;
 declare var cordova: any;
+
+var ProgressBar = require('progressbar.js')
+
 
 
 /*
@@ -33,16 +42,32 @@ export class RecordPage {
     public image_play: boolean = true;
     public image_stopPlay: boolean = true;
     private generic_file_name: string = "recording.wav";
-
+    private bar :any;
 
   	constructor(public navCtrl: NavController, public navParams: NavParams,public alertCtrl: AlertController) {
 	  	this.image_record = false; //display record image
 	  	this.recording_status = "";
+	  	console.log("0."+13.4);
+
+	  	
+
 
 	}
 
 	ionViewDidLoad() {
 	    console.log('ionViewDidLoad RecordPage');
+
+	    this.bar = new ProgressBar.Circle('#circle', {
+		  strokeWidth: 1,
+		  easing: 'easeInOut',
+		  duration: 300,
+		  color: '#92d36e',
+		  trailColor: '#eee',
+		  trailWidth: 1,
+		  svgStyle: null
+		});
+
+
 	}
 
 	
@@ -78,6 +103,7 @@ export class RecordPage {
 		//this.showAlert(duration)
 
 		this.percentage = (this.limit_sec / limit_valid) * 100;
+		this.bar.animate("0."+this.percentage); 
 		if(this.limit_sec == limit_valid){
 			this.stopRecording();
 			clearInterval(this.ticker)

@@ -15,47 +15,56 @@
 
 <ion-content padding>
 	<ion-grid>
-		<ion-row>
+		<ion-row style="margin-top: 30px">
 		    <ion-col width-100  text-center class="recorder-body">
 		    	<ion-col width-100 text-center>
-					<h4>{{limit_sec}} second/s</h4>
-					{{audioDuration}}
+					<h4>{{limit_sec}}</h4>
 				</ion-col>
-	    		<div center class="c100 p{{percentage}} recorder" (click)="processRecording()">
-				  <span  >
-				  		<img [hidden]="image_record" src="assets/images/record.svg">	
-				  		<img [hidden]="image_play" src="assets/images/play.svg">
-				  		<img [hidden]="image_stop" src="assets/images/stop.svg">
-				  	</span >
-				  <div center class="slice">
-				    <div class="bar"></div>
-				    <div class="fill"></div>
-				  </div>
-				</div>
+	    		
 		    </ion-col>
 		</ion-row>
+
+		<ion-row>
+		    <ion-col width-100  text-center class="recorder-body">
+		    	 	<ion-icon ios="ios-microphone" md="md-microphone" [hidden] ="image_record" class="record-icon" center (click)="processRecording()"></ion-icon>
+		    	   	<ion-icon ios="ios-play" md="md-play" class="record-icon" [hidden] ="image_play"></ion-icon>
+		    	   	<ion-icon ios="ios-hand" md="md-hand" class="record-icon" [hidden] ="image_stop"></ion-icon>
+
+	    		<div id="circle"  (click)="processRecording()">
+	    			   
+	    		</div>
+		    </ion-col>
+		</ion-row>
+
+		<ion-row class="margin-t50">
+		    <ion-col width-100  text-center >
+		    	 
+						<button class="w200 " ion-button color="default"  (click)="logIn()"   block>
+	  						Send
+	  					</button>  
+	    		
+		    </ion-col>
+		</ion-row>
+
 	</ion-grid>
+
 
 </ion-content>
 
 
 
-<ion-footer>
+<ion-footer color="bg">
   <ion-toolbar>
     <ion-title>
 
     	<ion-grid padding>
 		  <ion-row>
 		    <ion-col width-50 >
-				<button ion-button color="default" round (click)="sendRecordedMessage()" style="height:40px"  block>
-					  <ion-icon ios="ios-send" md="md-send"> Send</ion-icon> 
-				</button>
+					  <ion-icon class="float-left navig" ios="ios-arrow-back navig" md="md-arrow-back"> Back</ion-icon> 
 		    </ion-col>
 
 		     <ion-col width-50 >
-				<button ion-button color="danger" round (click)="resetRecording()" style="height:40px"  block>
-					 <ion-icon ios="ios-refresh" md="md-refresh"> Reset</ion-icon>
-				</button>
+					 <ion-icon class="float-right navig" ios="ios-refresh" md="md-refresh"> Reset</ion-icon>
 		    </ion-col>
 		  </ion-row>
 	</ion-grid>

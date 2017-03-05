@@ -6,6 +6,11 @@ import { RecordPage } from '../pages/record/record';
 import { RoundProgressModule } from 'angular-svg-round-progressbar';
 import { LoginPage } from '../pages/login/login';
 import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
+import { FormsModule } from '@angular/forms';
+import { ProfilePage } from '../pages/profile/profile';
+import { ConvoPage } from '../pages/convo/convo';
+import { IonicAudioModule } from 'ionic-audio';
+
 
 const cloudSettings: CloudSettings = {
   'core': {
@@ -25,20 +30,28 @@ const cloudSettings: CloudSettings = {
     MyApp,
     HomePage,
     RecordPage,
-    LoginPage
+    LoginPage,
+    ProfilePage,
+    ConvoPage
+    
 
   ],
   imports: [
     IonicModule.forRoot(MyApp),
     RoundProgressModule,
-   CloudModule.forRoot(cloudSettings)
+    FormsModule,
+    CloudModule.forRoot(cloudSettings),
+    IonicAudioModule.forRoot()
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
     RecordPage,
-    LoginPage
+    LoginPage,
+    ProfilePage,
+    ConvoPage
 
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]

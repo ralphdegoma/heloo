@@ -6,8 +6,8 @@
 -->
 <ion-header>
 
-  <ion-navbar center>
-    <ion-title center class="center-title">Heloo - Say it</ion-title>
+  <ion-navbar color="bg" center>
+    <ion-title center class="center-title"><h3 class="title-header" text-center>Heloo</h3></ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -17,27 +17,41 @@
 
 
 <ion-grid padding>
-  <ion-row>
-    <ion-col width-100 >
-		<ion-list>
-		  <ion-item>
-		    <ion-label floating>Username</ion-label>
-		    <ion-input type="text"></ion-input>
-		  </ion-item>
 
-		  <ion-item>
-		    <ion-label floating>Password</ion-label>
-		    <ion-input type="password"></ion-input>
-		  </ion-item>
-		</ion-list>
+	<ion-row>
+	    <ion-col text-center width-100 class="margin-t20">
+	    </ion-col>
+	</ion-row>
+
+
+  <ion-row >
+    <ion-col width-100  class="margin-20">
+		<div class="form">
+			<div class="form-group">
+				<label>Username</label>
+				<input type="text" name="username" class="input" [(ngModel)]="LoginData.username" placeholder="Username">
+			</div> 
+
+			<div class="form-group">
+				<label>Password</label>
+				<input type="password" name="username" class="input" [(ngModel)]="LoginData.password" placeholder="password">
+			</div>
+		</div>
     </ion-col>
   </ion-row>
 
   <ion-row>
-  		<ion-col width-80 offset-10>
-			<button ion-button color="default"  (click)="logIn()" style="height:40px"  block>
-				<ion-icon ios="logo-facebook" md="logo-facebook"> Log-in with Facebook</ion-icon>
-			</button>
+  		<ion-col width-100 >
+  			<div class="form">
+  				<div class="form-group"  text-center>
+					<label class="danger">{{errorMessage}}</label>
+  				</div>
+				<div class="form-group"  text-center>
+					<button class="w200 " ion-button color="default"  (click)="logIn()"   block>
+	  					<ion-icon ios="ios-log-in" md="md-log-in"> Login</ion-icon>
+	  				</button>  
+  				</div>
+  			</div>
 	    </ion-col>
   </ion-row>
 </ion-grid>
